@@ -1,53 +1,37 @@
 import java.util.Arrays;
 
-
-
 public class BinarySearch {
 	
 	public static int findTarget(int[] arr, int target){
         
-		Arrays.sort(arr);
+		Arrays.sort(arr); //sort the array 
+	
+	
+        int start = 0;
+		int endindex = arr.length - 1; 
 		
+		while (start <= endindex) {
+        int midindex = (endindex - 1)/2;  
 
-
-		int midindex = ((arr.length) - 1)/2;
-
-		if (arr[midindex] > target )
-		{ 
-		  int endindex = arr.length - 1;
-
-		  for (int ls = midindex; ls <= endindex; ++ls)
-		  {
-                   if(target == arr[ls])
-				   {
-					int returnval = ls;
-				   }
-				   
-		  }
-       
-          //arr = Arrays.copyOfRange(arr, (arr[0]), (arr[midindex]));
-		}
-		else if (arr[midindex] < target)
-		{
-			for (int ls = 0; ls <= midindex; ++ls)
-			{
-				if(target == arr[ls])
-				{
-					int returnval = ls;
-				}
+			if(arr[midindex] == target){
+				return arr[midindex];     
 			}
-           //arr = Arrays.copyOfRange(arr, (arr[midindex]), (arr[(arr.length - 1)]));
-		}
-		else if (arr[midindex] == target)
-		{
-			int returnval = midindex;
-		}
-        
-		else 
-		{
-			int returnval = -1;
-			return returnval;
-		}
-//test commit
+			else if (arr[midindex] < target)
+			{
+			  start = midindex + 1;
+			}
+			else if (arr[midindex] > target)
+			{
+				endindex = midindex - start;
+			}
+			 break;
+		    }
+
+  return -1;
+
+
 	}
+	
 }
+
+    
