@@ -6,9 +6,13 @@ public class index {
     {
   
       int[] arr = {1, 5, 7, 8, 9, 11, 18, 19, 20, 25};
+
+      int[] ar = {1, 2};
+
+      RecurseEx.printPermutn(ar, 0);
       
     
-      int num = BinarySearch.findTarget(arr, 20);
+      int num = BinarySearch.findTarget(arr, 11);
 
       System.out.println("Binary search array val is: " + num);
 
