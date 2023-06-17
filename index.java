@@ -11,13 +11,18 @@ public class index {
 
       RecurseEx.printPermutn(ar, 0);
       
-    
+     Listc.listRefresh();
       int num = BinarySearch.findTarget(arr, 11);
 
       System.out.println("Binary search array val is: " + num);
 
         String sl = VowelOnly.vowelOnly("Udacity");
         System.out.println(sl);
+
+
+       
+        
+       
     }
 
 }
