@@ -9,22 +9,29 @@ public class BinarySearch {
 	
         int start = 0;
 		int endindex = arr.length - 1; 
-		
-		while (start <= endindex) {
         int midindex = (endindex - 1)/2;  
+		
+		if (target > arr[endindex])
+		{
+			return -1;
+		}
 
-			if(arr[midindex] == target){
+		while (start <= endindex) {
+        
+
+			if(target == arr[midindex]){
 				return arr[midindex];     
 			}
-			else if (arr[midindex] < target)
+				else if (target < arr[midindex])
 			{
-			  start = midindex + 1;
+				endindex-=1;
 			}
-			else if (arr[midindex] > target)
+		
+			else if (target > arr[midindex])
 			{
-				endindex = midindex - start;
+			    midindex +=1;
 			}
-			 break;
+		
 		    }
 
   return -1;
