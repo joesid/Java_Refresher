@@ -8,7 +8,7 @@ public class Listc {
     
     public static void listRefresh(){
 
-       /*  List arrayList = new ArrayList();
+        List arrayList = new ArrayList();
 
         arrayList.add("Amani");
         arrayList.add("Jane");
@@ -17,8 +17,8 @@ public class Listc {
 
         System.out.println("Size: " + arrayList.size());
 
-        System.out.println("ArrayLis elements: ");
-        System.out.println(arrayList);  */
+        System.out.println("ArrayList elements: ");
+        System.out.println(arrayList);  
 
 
         ArrayList<String> cars = new ArrayList<String>();
@@ -26,6 +26,7 @@ public class Listc {
         cars.add("BMW");
         cars.add("Ford");
         cars.add("Mazda");
+    
         Collections.sort(cars); 
 
         for (String i: cars) {
@@ -35,4 +36,18 @@ public class Listc {
 
 
     }
+
+
+    // static List<String>[] groupString(List<String> input){
+
+    //     int len = (input.size() - 1);
+
+    //     for(int i = 0; i<= len; i++)
+    //     {
+    //       Collections.sort(input[i]);
+    //     }
+        
+
+    //     return ist;
+    // }
 }
