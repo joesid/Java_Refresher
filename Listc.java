@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Collections;
+import java.util.LinkedList;
+import java.util.Arrays;
 
 
 public class Listc {
@@ -38,16 +40,24 @@ public class Listc {
     }
 
 
-    // static List<String>[] groupString(List<String> input){
+    static List<String>[] groupString(List<String> input){
 
-    //     int len = (input.size() - 1);
+    List<String>[]  big_list = new List[3];
+    
+    for(String in: input){
+        if(in.charAt(0) == 'a'){
+            List<String> sub_list;
+            if (big_list[0] == null)
+            {
+             sub_list = new ArrayList<>();
+            }
+            else{
+                sub_list = big_list [0];
+            }
+        }
+    }
 
-    //     for(int i = 0; i<= len; i++)
-    //     {
-    //       Collections.sort(input[i]);
-    //     }
-        
 
-    //     return ist;
-    // }
+    return big_list;
+     }
 }
